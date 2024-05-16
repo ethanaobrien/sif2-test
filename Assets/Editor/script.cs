@@ -200,15 +200,16 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         }
     }
 
+    
     private static string BuildFromArch(bool android)
     {
         var arch = android ? "Android" : "iOS";
-        EncryptFiles("Assets/TextAsset/Masterdata/Raw/"+arch+"/", "Assets/TextAsset/Masterdata/Encrypted/"+arch+"/", true, "");
-        var last = BuildBundle("Assets/TextAsset/Masterdata/Encrypted/"+arch+"/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android);
+        EncryptFiles("Assets/TextAsset/Masterdata/Raw/", "Assets/TextAsset/Masterdata/Encrypted/", true, "");
+        var last = BuildBundle("Assets/TextAsset/Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android);
         
-        EncryptFiles("Assets/TextAsset/Manifest/Raw/"+arch+"/", "Assets/TextAsset/Manifest/Encrypted/"+arch+"/", false, last);
+        EncryptFiles("Assets/TextAsset/Manifest/Raw/", "Assets/TextAsset/Manifest/Encrypted/", false, last);
         
-        var lastBuild = BuildBundle("Assets/TextAsset/Manifest/Encrypted/"+arch+"/", "387b0126300c54515911bffb6540982d.unity3d", android);
+        var lastBuild = BuildBundle("Assets/TextAsset/Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android);
         var readText = File.ReadAllText(lastBuild + ".manifest");
         var hash = readText.Split("AssetFileHash").Last().Split("Hash:")[1].Split("\n")[0].Trim();
         return hash;
@@ -222,8 +223,8 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         var hash2 = BuildFromArch(false);
         Debug.Log("Build finished.\n Android asset hash: " + hash + "\n iOS asset hash: " + hash2);
     }
-    
 
+    //Serialisation
     public static ShockBinaryBundleSingleManifest DeserializeObject(string filePath)
     {
         using (FileStream fs = new FileStream(filePath, FileMode.Open))
