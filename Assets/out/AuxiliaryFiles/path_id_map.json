@@ -1,0 +1,914 @@
+{
+  "Files": [
+    {
+      "Name": "cab-ba9d4468c37b952d0f7fc20917b87475",
+      "Assets": [
+        {
+          "PathID": -8949624365292759427,
+          "Name": "lottery_image",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8936098268326046768,
+          "Name": "exchange_item",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8783927671777641524,
+          "Name": "event_point_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8774161596945959677,
+          "Name": "star_event_level_reward_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8744593307745889909,
+          "Name": "event_live",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8744017084570569028,
+          "Name": "text",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8590852362858408147,
+          "Name": "evolve_item_amount",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8377362488929643408,
+          "Name": "scene_title",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8264203826366649350,
+          "Name": "card_level",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8181765078595220844,
+          "Name": "lottery_price",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8164470302513722444,
+          "Name": "evolve_item_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -8072968564323102135,
+          "Name": "resource_download",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7785725334810861337,
+          "Name": "group",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7594046977186411649,
+          "Name": "multi_penalty",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7503121596020785517,
+          "Name": "beginner_mission_reward_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7377817342985702386,
+          "Name": "live_mission_combo",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7325240437834601266,
+          "Name": "card_sys_voice",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -7130456181838315352,
+          "Name": "event_score",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6907581541469761294,
+          "Name": "lottery_item",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6837991979495195828,
+          "Name": "navigation_dialog_page",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6666359994351493092,
+          "Name": "multievent_matchingrange",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6472174798518584995,
+          "Name": "chat_attachment",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6438934599125851266,
+          "Name": "live_recommend",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6424229314571147645,
+          "Name": "chat_room",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6397152024421877660,
+          "Name": "card_collection_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6294462359126740813,
+          "Name": "lottery",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6236162530474358904,
+          "Name": "lottery_rarity",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6038218107206601430,
+          "Name": "user_rank_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -6008293121918379496,
+          "Name": "mission",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5578212205323402667,
+          "Name": "event_top_banner",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5553094195801174764,
+          "Name": "live_reward_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5385922913649123570,
+          "Name": "live",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5315203038491801147,
+          "Name": "preset_foreground",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5191550861063454903,
+          "Name": "beginner_mission_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5178495546989800663,
+          "Name": "music",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5148380860232266430,
+          "Name": "shop_item",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5128061847195846281,
+          "Name": "event_story",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -5099905010519772765,
+          "Name": "live_rule",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -4917177373116003964,
+          "Name": "music_shop_price",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -4824541682309716855,
+          "Name": "lottery_eff_movie",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -4625107212898790014,
+          "Name": "album_series_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -4556165689350169029,
+          "Name": "live_tap_se",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -4123983958256971789,
+          "Name": "album_series_thumbnail_asset_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3963332546950059572,
+          "Name": "multi_daily_drop_effect",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3950361082917990518,
+          "Name": "location_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3924520142422139856,
+          "Name": "card_get",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3830197298940030987,
+          "Name": "const",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3800255026079462720,
+          "Name": "album_member_tag_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3706761741389342381,
+          "Name": "live_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3624768786378823944,
+          "Name": "login_bonus",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3535781529338411743,
+          "Name": "notice_music_image",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3527595974806674938,
+          "Name": "album_unit_type",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3359111521755477952,
+          "Name": "home_bg",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3356341507076752025,
+          "Name": "achievement",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3244962382642326610,
+          "Name": "live_combo",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -3010176474223863630,
+          "Name": "home_banner",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2990372225887483552,
+          "Name": "event_score_ranking_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2928348083819741900,
+          "Name": "album_unit_pair_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2910174114459030451,
+          "Name": "music_level",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2578387664109235106,
+          "Name": "location",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2556060805316540864,
+          "Name": "movie",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2432100083355663371,
+          "Name": "chipster_result_code",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2388908541975747149,
+          "Name": "subscription_image",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2314685654000828404,
+          "Name": "notice_card",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2286896883620784243,
+          "Name": "star_event_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2273704590234835513,
+          "Name": "limited_live",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2214009273714083408,
+          "Name": "lottery_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2206995963870014695,
+          "Name": "notice_card_image",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2078594065278373734,
+          "Name": "album_unit_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -2006172884419967822,
+          "Name": "chat_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -1851446538696299248,
+          "Name": "multievent_rankbonus",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -1783578556503248298,
+          "Name": "dialog_button",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -1598301173800027037,
+          "Name": "live_mission",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -1113954861272358057,
+          "Name": "card_evolve",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -958987840565354450,
+          "Name": "sound_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -823492827554216370,
+          "Name": "voice_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -764733030074668881,
+          "Name": "lottery_eff_movie_ratio",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -695075353237601901,
+          "Name": "character_sys_voice",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -592669540735429250,
+          "Name": "live_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -541672294819756628,
+          "Name": "album_card_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -487537290175376812,
+          "Name": "multievent_penalty",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -463799893466147456,
+          "Name": "notice_gacha",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -436924071937986986,
+          "Name": "multi_room_select",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -415459062982379812,
+          "Name": "live_recommend_list",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -406089666690341646,
+          "Name": "chat_voice_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -284402481812358433,
+          "Name": "event_tips_page",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -252201133413196034,
+          "Name": "live_ranking_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": -246184417571832176,
+          "Name": "navigation",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 52578823356467328,
+          "Name": "live_input_result",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 95459507950625397,
+          "Name": "comic",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 192525674273984158,
+          "Name": "card",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 424767441620217803,
+          "Name": "skill_center_effect",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 537890853187326168,
+          "Name": "gamelib_result_code",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 664280457680917496,
+          "Name": "story_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 677630650588186046,
+          "Name": "movie_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 800944465540564468,
+          "Name": "character",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 867753505159966662,
+          "Name": "mission_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 928341834675906137,
+          "Name": "stamp",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 944945579853864600,
+          "Name": "album_unit_series_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 964277378387017572,
+          "Name": "billing_shop",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1054148523665683020,
+          "Name": "shop_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1286179575154792272,
+          "Name": "membership_wallpaper",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1415425358025046137,
+          "Name": "card_skill_level",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1476595226022622905,
+          "Name": "chat_chapter",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1533149592297247548,
+          "Name": "story_release",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1649305334425053030,
+          "Name": "function_lock",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1712443028977311326,
+          "Name": "se",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1751753519227778361,
+          "Name": "event",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 1923234129766974522,
+          "Name": "wipe",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2066098196795948485,
+          "Name": "multi_room_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2077882397055573150,
+          "Name": "event_type",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2157652504593521099,
+          "Name": "event_point_ranking_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2444125759858595324,
+          "Name": "card_rarity",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2668929164443710149,
+          "Name": "part_voice_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2832163564338457816,
+          "Name": "wipe_play_list",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2838862101879135716,
+          "Name": "chat",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2864018439486476304,
+          "Name": "lottery_caution",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 2911225210366375037,
+          "Name": "event_member_ranking_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3060914431304841083,
+          "Name": "notice_general_navigation",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3124095046196154348,
+          "Name": "chat_stamp",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3173058240498273371,
+          "Name": "album_unit_type_member_tag_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3199397255795527019,
+          "Name": "star_event_card_bonus",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3293283429213271622,
+          "Name": "live_tap_effect",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3379866409590580987,
+          "Name": "beginner_mission",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3437618492277176995,
+          "Name": "multievent_card_bonus",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3517464700865120657,
+          "Name": "title_screen",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3523819582713972194,
+          "Name": "live_boost",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3790125084786623202,
+          "Name": "event_tips",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 3938078632429922787,
+          "Name": "story",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4108585275014783447,
+          "Name": "billing_subscription_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4119955298912494679,
+          "Name": "result_code",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4177812759893299508,
+          "Name": "live_lane_skin",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4198786005273356558,
+          "Name": "card_evolve_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4524322904235152156,
+          "Name": "event_member_ranking",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4543151221345009497,
+          "Name": "preset_background",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4744414639302535079,
+          "Name": "notice_birthday",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4768730987603887790,
+          "Name": "navigation_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 4990708879940288422,
+          "Name": "login_bonus_reward_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5080760304307163177,
+          "Name": "billing_product_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5192055883868522709,
+          "Name": "event_point_settings",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5245793301662698300,
+          "Name": "release_label",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5267804579885260367,
+          "Name": "event_point",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5460508277074516113,
+          "Name": "adjust_tracking_list",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5529677153363758992,
+          "Name": "live_effect_value",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5590783994444273871,
+          "Name": "event_score_ranking",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5658444256649706719,
+          "Name": "lottery_info",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5716703007091864351,
+          "Name": "star_event_level",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5737816528536119139,
+          "Name": "date_condition",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5770935897315184562,
+          "Name": "dialog",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5784623704283407080,
+          "Name": "live_mission_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 5925409241692350351,
+          "Name": "chat_character",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6363656021685466648,
+          "Name": "event_card_bonus",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6517297345080168598,
+          "Name": "date_condition_others",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6518043834366828940,
+          "Name": "lottery_stepup",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6558053814024627809,
+          "Name": "voice",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6658913298443922833,
+          "Name": "event_point_ranking",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6659990157360155160,
+          "Name": "billing_subscription",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6706699470404811476,
+          "Name": "mission_banner",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6818166216997276715,
+          "Name": "multievent_setting",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6942246570477651128,
+          "Name": "notice_general_sequence",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 6964921194045220206,
+          "Name": "url",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7109472189719257480,
+          "Name": "story_part",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7156173841353337394,
+          "Name": "title",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7288013926764595841,
+          "Name": "character_group",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7297465857917481639,
+          "Name": "billing_product",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7355737577212775494,
+          "Name": "notice_general",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7387938143749338718,
+          "Name": "bgm",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7421718426963342128,
+          "Name": "skill_center",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7466893303808862674,
+          "Name": "exchange",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7511667968557813650,
+          "Name": "sys_voice_key",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7545470160800052711,
+          "Name": "album_multi_unit_m",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 7965281532145060142,
+          "Name": "new_skill",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8077671333780184702,
+          "Name": "star_event_level_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8086652487562656528,
+          "Name": "rhythm_icon",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8200169368369906663,
+          "Name": "live_clear_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8705028093246028059,
+          "Name": "exchange_item_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8803495970030302144,
+          "Name": "login_bonus_reward",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8882904616865483733,
+          "Name": "item",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 8966003420868599618,
+          "Name": "user_rank",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 9077788219593336694,
+          "Name": "notice_music",
+          "Type": "TextAsset"
+        },
+        {
+          "PathID": 9189399172074250340,
+          "Name": "common_bg_movie",
+          "Type": "TextAsset"
+        }
+      ]
+    }
+  ]
+}
