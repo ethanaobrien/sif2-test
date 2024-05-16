@@ -49,4 +49,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 temp.bin
-
+StreamingAssets/out/
+StreamingAssets/temp/
