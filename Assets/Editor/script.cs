@@ -90,7 +90,7 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
     }
     private static void Init()
     {
-        var path = "Assets/StreamingAssets/out/";
+        var path = "Assets/StreamingAssets/out/jp/";
         if (Directory.Exists(path))
         {
             var dir = new DirectoryInfo(path);
@@ -100,9 +100,9 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         Directory.CreateDirectory(path + "Android");
         Directory.CreateDirectory(path + "iOS");
     }
-    private static void MoveOutput(string outFile, bool android)
+    private static void MoveOutput(string outFile, bool android, bool jp)
     {
-        var basePath = "Assets/StreamingAssets/out/" + (android ? "Android" : "iOS") + "/";
+        var basePath = "Assets/StreamingAssets/out/" + (jp ? "jp" : "global") + "/" + (android ? "Android" : "iOS") + "/";
         var readText = File.ReadAllText(outFile + ".manifest");
         var hash = readText.Split("AssetFileHash").Last().Split("Hash:")[1].Split("\n")[0].Trim();
         var path = basePath + hash + "/" + outFile.Split("/").Last();
@@ -112,7 +112,7 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         File.Copy(outFile, path);
     }
     
-    private static string BuildBundle(string folderPath, string bundleName, bool android)
+    private static string BuildBundle(string folderPath, string bundleName, bool android, bool jp)
     {
         var buildMap = new AssetBundleBuild[2];
         buildMap[0].assetBundleName = bundleName;
@@ -130,7 +130,7 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         Directory.CreateDirectory(path);
         
         BuildPipeline.BuildAssetBundles(path, buildMap, BuildAssetBundleOptions.ChunkBasedCompression, android ? BuildTarget.Android : BuildTarget.iOS);
-        MoveOutput(path + "/" + bundleName, android);
+        MoveOutput(path + "/" + bundleName, android, jp);
         return path + "/" + bundleName;
     }
 
@@ -201,15 +201,15 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
     }
 
     
-    private static string BuildFromArch(bool android)
+    private static string BuildFromArch(bool android, bool jp)
     {
         var arch = android ? "Android" : "iOS";
-        EncryptFiles("Assets/TextAsset/Masterdata/Raw/", "Assets/TextAsset/Masterdata/Encrypted/", true, "");
-        var last = BuildBundle("Assets/TextAsset/Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android);
+        EncryptFiles("Assets/TextAsset/jp/Masterdata/Raw/", "Assets/TextAsset/jp/Masterdata/Encrypted/", true, "");
+        var last = BuildBundle("Assets/TextAsset/jp/Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android, jp);
         
-        EncryptFiles("Assets/TextAsset/Manifest/Raw/", "Assets/TextAsset/Manifest/Encrypted/", false, last);
+        EncryptFiles("Assets/TextAsset/jp/Manifest/Raw/", "Assets/TextAsset/jp/Manifest/Encrypted/", false, last);
         
-        var lastBuild = BuildBundle("Assets/TextAsset/Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android);
+        var lastBuild = BuildBundle("Assets/TextAsset/jp/Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android, jp);
         var readText = File.ReadAllText(lastBuild + ".manifest");
         var hash = readText.Split("AssetFileHash").Last().Split("Hash:")[1].Split("\n")[0].Trim();
         return hash;
@@ -219,9 +219,9 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
     public static void Build()
     {
         Init();
-        var hash = BuildFromArch(true);
-        var hash2 = BuildFromArch(false);
-        Debug.Log("Build finished.\n Android asset hash: " + hash + "\n iOS asset hash: " + hash2);
+        var hash = BuildFromArch(true, true);
+        var hash2 = BuildFromArch(false, true);
+        Debug.Log("Build finished.\n Android JP asset hash: " + hash + "\n iOS JP asset hash: " + hash2);
     }
 
     //Serialisation
