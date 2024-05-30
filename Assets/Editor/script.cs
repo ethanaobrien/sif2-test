@@ -90,19 +90,21 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
     }
     private static void Init()
     {
-        var path = "Assets/StreamingAssets/out/jp/";
+        var path = "Assets/StreamingAssets/out/";
         if (Directory.Exists(path))
         {
             var dir = new DirectoryInfo(path);
             dir.Delete(true);
         }
         Directory.CreateDirectory(path);
-        Directory.CreateDirectory(path + "Android");
-        Directory.CreateDirectory(path + "iOS");
+        Directory.CreateDirectory(path + "jp/Android");
+        Directory.CreateDirectory(path + "jp/iOS");
+        Directory.CreateDirectory(path + "gl/Android");
+        Directory.CreateDirectory(path + "gl/iOS");
     }
     private static void MoveOutput(string outFile, bool android, bool jp)
     {
-        var basePath = "Assets/StreamingAssets/out/" + (jp ? "jp" : "global") + "/" + (android ? "Android" : "iOS") + "/";
+        var basePath = "Assets/StreamingAssets/out/" + (jp ? "jp" : "gl") + "/" + (android ? "Android" : "iOS") + "/";
         var readText = File.ReadAllText(outFile + ".manifest");
         var hash = readText.Split("AssetFileHash").Last().Split("Hash:")[1].Split("\n")[0].Trim();
         var path = basePath + hash + "/" + outFile.Split("/").Last();
@@ -153,7 +155,6 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         var crc = uint.Parse(readText.Split("CRC:").Last().Split("\n")[0].Trim());
         var length = new System.IO.FileInfo(lastBuild).Length;
         
-        Debug.Log(type);
         if (type == "Bundle")
         {
             ShockBinaryBundleSingleManifest obj = DeserializeObject(file);
@@ -204,12 +205,14 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
     private static string BuildFromArch(bool android, bool jp)
     {
         var arch = android ? "Android" : "iOS";
-        EncryptFiles("Assets/TextAsset/jp/Masterdata/Raw/", "Assets/TextAsset/jp/Masterdata/Encrypted/", true, "");
-        var last = BuildBundle("Assets/TextAsset/jp/Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android, jp);
+        var basePath = "Assets/TextAsset/" + (jp ? "jp" : "gl") + "/";
+
+        EncryptFiles(basePath + "Masterdata/Raw/", basePath + "Masterdata/Encrypted/", true, "");
+        var last = BuildBundle(basePath + "Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android, jp);
         
-        EncryptFiles("Assets/TextAsset/jp/Manifest/Raw/", "Assets/TextAsset/jp/Manifest/Encrypted/", false, last);
+        EncryptFiles(basePath + "Manifest/Raw/", basePath + "Manifest/Encrypted/", false, last);
         
-        var lastBuild = BuildBundle("Assets/TextAsset/jp/Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android, jp);
+        var lastBuild = BuildBundle(basePath + "Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android, jp);
         var readText = File.ReadAllText(lastBuild + ".manifest");
         var hash = readText.Split("AssetFileHash").Last().Split("Hash:")[1].Split("\n")[0].Trim();
         return hash;
@@ -221,7 +224,10 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         Init();
         var hash = BuildFromArch(true, true);
         var hash2 = BuildFromArch(false, true);
-        Debug.Log("Build finished.\n Android JP asset hash: " + hash + "\n iOS JP asset hash: " + hash2);
+
+        var hash3 = BuildFromArch(true, false);
+        var hash4 = BuildFromArch(false, false);
+        Debug.Log("Build finished.\n Android JP asset hash: " + hash + "\n iOS JP asset hash: " + hash2 + "\n Android GL asset hash: " + hash3 + "\n iOS GL asset hash: " + hash4);
     }
 
     //Serialisation
