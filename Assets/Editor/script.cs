@@ -160,7 +160,7 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
             ShockBinaryBundleSingleManifest obj = DeserializeObject(file);
             foreach (var item in obj.m_manifestCollection)
             {
-                if (item.m_name != "6572ca8348bc566b8cf01d43c4cc1b58")
+                if (item.m_identifier != "mst.ab")
                 {
                     continue;
                 }
