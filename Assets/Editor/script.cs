@@ -155,9 +155,9 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         var crc = uint.Parse(readText.Split("CRC:").Last().Split("\n")[0].Trim());
         var length = new System.IO.FileInfo(lastBuild).Length;
         
-        if (type == "Bundle")
+        if (type == "Bundle.json")
         {
-            ShockBinaryBundleSingleManifest obj = DeserializeObject(file);
+            var obj = JsonConvert.DeserializeObject<ShockBinaryBundleSingleManifest>(File.ReadAllText(file));
             foreach (var item in obj.m_manifestCollection)
             {
                 if (item.m_identifier != "mst.ab")
@@ -176,7 +176,7 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         return File.ReadAllBytes(file);
     }
 
-    private static void EncryptFiles(string folder, string path, bool masterData, string lastBuild)
+    private static void EncryptFiles(string folder, string path, string lastBuild)
     {
         if (!Directory.Exists(path))
         {
@@ -185,9 +185,13 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         var files = Directory.GetFiles(folder);
         foreach (var file in files)
         {
-            if (file.IndexOf(".") == -1)
+            if (file.EndsWith("Bundle.json") || file.EndsWith("Movie") || file.EndsWith("Sound")) {
+                var encrypted = EncryptAES_CBC("akmzncej3dfheuds654sg9ad1f3fnfoi", "lmxcye89bsdfb0a1", Compress(UpdateData(file, file.Split("/").Last(), lastBuild)));
+                File.WriteAllBytes(path + file.Split("/").Last() + ".bytes", encrypted);
+
+            } else if (file.IndexOf(".") == -1)
             {
-                var encrypted = masterData ? EncryptMST(File.ReadAllBytes(file)) : EncryptAES_CBC("akmzncej3dfheuds654sg9ad1f3fnfoi", "lmxcye89bsdfb0a1", Compress(UpdateData(file, file.Split("/").Last(), lastBuild)));
+                var encrypted = EncryptMST(File.ReadAllBytes(file));
                 File.WriteAllBytes(path + file.Split("/").Last() + ".bytes", encrypted);
             }
             else if (file.Split("/").Last() == "release_label.json")
@@ -207,10 +211,10 @@ public class BuildAssetBundlesBuildMapExample : MonoBehaviour
         var arch = android ? "Android" : "iOS";
         var basePath = "Assets/TextAsset/" + (jp ? "jp" : "gl") + "/";
 
-        EncryptFiles(basePath + "Masterdata/Raw/", basePath + "Masterdata/Encrypted/", true, "");
+        EncryptFiles(basePath + "Masterdata/Raw/", basePath + "Masterdata/Encrypted/", "");
         var last = BuildBundle(basePath + "Masterdata/Encrypted/", "6572ca8348bc566b8cf01d43c4cc1b58.unity3d", android, jp);
         
-        EncryptFiles(basePath + "Manifest/Raw/", basePath + "Manifest/Encrypted/", false, last);
+        EncryptFiles(basePath + "Manifest/Raw/", basePath + "Manifest/Encrypted/", last);
         
         var lastBuild = BuildBundle(basePath + "Manifest/Encrypted/", "387b0126300c54515911bffb6540982d.unity3d", android, jp);
         var readText = File.ReadAllText(lastBuild + ".manifest");
